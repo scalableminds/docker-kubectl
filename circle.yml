@@ -7,7 +7,7 @@ dependencies:
 
 test:
   override:
-    - docker run "scalableminds/kubectl:$VERSION_TAG" version -c
+    - docker run "scalableminds/kubectl:${CIRCLE_BRANCH}__${CIRCLE_BUILD_NUM}" version -c
 
 deployment:
   hub:
